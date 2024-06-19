@@ -15,6 +15,28 @@ function configureRoutes(routesService: RoutesService) {
         order: 1,
         layout: eLayoutType.application,
       },
+      {
+        path: '/lawyers',
+        name: 'Lawyer',
+        iconClass: 'fas fa-book',
+        order: 2,
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/Cases',
+        name: 'Case',
+        iconClass: 'fas fa-book',
+        order: 3,
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/Hearings',
+        name: 'Hearing',
+        iconClass: 'fas fa-book',
+        order: 4,
+        layout: eLayoutType.application,
+      },
+      
     ]);
   };
 }
