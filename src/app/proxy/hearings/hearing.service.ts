@@ -7,7 +7,7 @@ import type { CreateOrUpdateHearingDTO, HearingDto, HearingListDTO } from '../dt
   providedIn: 'root',
 })
 export class HearingService {
-  apiName = 'Default';
+  apiName = 'default';
   
 
   create = (input: CreateOrUpdateHearingDTO, config?: Partial<Rest.Config>) =>

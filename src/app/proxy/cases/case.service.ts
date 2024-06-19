@@ -7,7 +7,7 @@ import type { CaseDTO, CaseListDTO, CreateOrUpdateCaseDto } from '../dto-s/model
   providedIn: 'root',
 })
 export class CaseService {
-  apiName = 'Default';
+  apiName = 'default';
   
 
   create = (input: CreateOrUpdateCaseDto, config?: Partial<Rest.Config>) =>

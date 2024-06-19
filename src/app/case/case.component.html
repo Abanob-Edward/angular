@@ -1,1 +1,35 @@
-<p>case works!</p>
+<a routerLink="/addCase" type="submit" class="btn btn-primary my-2">
+    Add New Case  
+    </a>
+    <div class="align-items-center" >
+        Cases 
+    </div><br/>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Year</th>
+            <th>Litigation Degree</th>
+            <th>Final Verdict</th>
+            <th>Lawyer Name</th>
+            <th colspan="2" class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cases">
+            <td>{{item.number}}</td>
+            <td>{{item.year}}</td>
+            <td>{{item.litigationDegree}}</td>
+            <td>{{item.FinalVerdict}}</td>
+            <td>{{item.lawyerName}}</td>
+
+            <td>
+              <button class="btn btn-success" (click)="updateCase(item.id)">Edit</button>
+            </td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteCase(item.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>

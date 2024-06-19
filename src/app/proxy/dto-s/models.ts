@@ -1,6 +1,7 @@
 import type { EntityDto, PagedAndSortedResultRequestDto } from '@abp/ng.core';
 
 export interface CaseDTO {
+  id?:string;
   number: number;
   year?: string;
   litigationDegree?: string;
@@ -13,6 +14,7 @@ export interface CaseListDTO extends PagedAndSortedResultRequestDto {
 }
 
 export interface CreateOrUpdateCaseDto {
+  id?:string ;
   number: number;
   year: string;
   litigationDegree: string;
@@ -21,12 +23,14 @@ export interface CreateOrUpdateCaseDto {
 }
 
 export interface CreateOrUpdateHearingDTO {
+  id?:string ;
   date: string;
   decision: string;
   caseId: string;
 }
 
 export interface CreateOrUpdateLawyerDTO {
+  id?: string;
   name: string;
   position: string;
   mobile: number;
@@ -43,6 +47,7 @@ export interface HearingListDTO extends PagedAndSortedResultRequestDto {
 }
 
 export interface LawyerDTO extends EntityDto<string> {
+  id?: string;
   name?: string;
   position: string;
   mobile: number;

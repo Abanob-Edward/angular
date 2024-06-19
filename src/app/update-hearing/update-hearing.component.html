@@ -1,0 +1,20 @@
+<form (ngSubmit)="updateHearing()">
+    <div class="form-group">
+        <label>Date</label>
+        <input type="text" class="form-control" placeholder="Date" name="Date" value="newHearing.date" [(ngModel)]="newHearing.date">
+    </div>
+    <div class="form-group">
+        <label>Decision</label>
+        <input type="text" class="form-control" placeholder="Decision" name="Decision" value="newHearing.decision" [(ngModel)]="newHearing.decision">
+    </div>
+    <div class="form-group">
+
+        <label>Case</label>
+        <select class="form-control" name="case" value="newHearing.caseId" [(ngModel)]="newHearing.caseId">
+            <option value="" selected>Select Case</option>
+            <option *ngFor="let case of cases" [value]="case.id">{{case.number}}</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary my-2">Update</button>
+</form>

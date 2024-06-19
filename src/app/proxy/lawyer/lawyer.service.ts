@@ -7,7 +7,7 @@ import type { CreateOrUpdateLawyerDTO, LawyerDTO, LaywerListDto } from '../dto-s
   providedIn: 'root',
 })
 export class lawyerService {
-  apiName = 'Default';
+  apiName = 'default';
   
 
   create = (input: CreateOrUpdateLawyerDTO, config?: Partial<Rest.Config>) =>

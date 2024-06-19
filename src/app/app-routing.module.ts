@@ -28,6 +28,12 @@ const routes: Routes = [
   { path: 'lawyers', loadChildren: () => import('./lawyer/lawyer.module').then(m => m.LawyerModule) },
   { path: 'Cases', loadChildren: () => import('./case/case.module').then(m => m.CaseModule) },
   { path: 'Hearings', loadChildren: () => import('./hearing/hearing.module').then(m => m.HearingModule) },
+  { path: 'addLawyer', loadChildren: () => import('./add-lawyer/add-lawyer.module').then(m => m.AddLawyerModule) },
+  { path: 'updateLawyer/:id', loadChildren: () => import('./update-lawyer/update-lawyer.module').then(m => m.UpdateLawyerModule) },
+  { path: 'updateHearing/:id', loadChildren: () => import('./update-hearing/update-hearing.module').then(m => m.UpdateHearingModule) },
+  { path: 'updateCase/:id', loadChildren: () => import('./update-case/update-case.module').then(m => m.UpdateCaseModule) },
+  { path: 'addCase', loadChildren: () => import('./add-case/add-case.module').then(m => m.AddCaseModule) },
+  { path: 'addHearing', loadChildren: () => import('./add-hearing/add-hearing.module').then(m => m.AddHearingModule) },
 ];
 
 @NgModule({
